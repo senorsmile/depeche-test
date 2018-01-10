@@ -1,5 +1,6 @@
 # depeche-test
 Whole node testing framework for Ansible
+NB: This is obviously a work in progress. 
 
 ## Rationale
 There are several ways to test your Ansible playbooks. 
