@@ -11,6 +11,16 @@
     ansible_ssh_port: 4101
     ansible_ssh_extra_args: '-o StrictHostKeyChecking=no'
 
+## run it again to test idempotency
+- import_playbook:    site.yml
+  tags:               test_main
+  vars:
+    ansible_host:     127.0.0.1
+    ansible_user:     vagrant
+    ansible_ssh_pass: vagrant
+    ansible_ssh_port: 4101
+    ansible_ssh_extra_args: '-o StrictHostKeyChecking=no'
+
 - import_playbook: test_down.yml
   tags:            test_down
 
