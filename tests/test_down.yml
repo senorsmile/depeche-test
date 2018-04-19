@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  gather_facts: False
+  tasks:
+    - name: vagrant down
+      raw: |
+        vagrant halt web01
+      register: vagrant_down
+      changed_when: ( 'Attempting graceful shutdown' in vagrant_down.stdout )

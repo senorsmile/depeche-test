@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  gather_facts: False
+  tasks:
+    - name: vagrant up
+      raw: |
+        vagrant status | grep web01 | grep running || vagrant up web01
+      register: vagrant_up
+      changed_when: ( 'running' not in vagrant_up.stdout )
+
+    - name: Pause for a few seconds to let vagrant node ssh to become available
+      pause: 
+        seconds: 5

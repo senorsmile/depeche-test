@@ -1,0 +1,7 @@
+[submodule "tests/roles/geerlingguy.nginx"]
+	path = tests/roles/geerlingguy.nginx
+	url = git@github.com:geerlingguy/ansible-role-nginx.git
+
+[submodule "tests/roles/geerlingguy.apache"]
+	path = tests/roles/geerlingguy.apache
+	url = git@github.com:geerlingguy/ansible-role-apache.git
